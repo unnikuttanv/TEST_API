@@ -1,0 +1,9 @@
+Test01 : 'Verify if RestAPI GET call response code is 200'
+Test02 : " Verify if RestAPI POST call response code 201"
+Test03 : " Verify if RestAPI DELETE call response code is 201"
+Test04 : " Verify if RestAPI PATCH call response code is 200"
+Test05 : " Verify if RestAPI PUT call response code is 200"
+Test06 : " Verify every data in album has unique userid 1 to 100"
+Test07 : " Verify every data in users has unique userid 1 to 10"
+Test08 : " Verify time taken to GET RestAPI response is less than 2 seconds"
+Test09 : " Verify every data in user have email_id"

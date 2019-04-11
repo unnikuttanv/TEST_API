@@ -1,0 +1,6 @@
+Url_albums : 'https://jsonplaceholder.typicode.com/albums'
+Url_users  : 'https://jsonplaceholder.typicode.com/users'
+User_name : ''
+Password  : ''
+Log_file  : 'Log'
+data      : ''
