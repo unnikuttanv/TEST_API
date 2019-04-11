@@ -38,26 +38,26 @@ class RestApi(object):
         album_obj = ApiTest(self.config_dict['Url_albums'], self.logger)
         users_obj = ApiTest(self.config_dict['Url_users'], self.logger)
         album_data ={
-                "id": 1,
-                "name": "Leanne Graham",
-                "username": "Bret",
-                "email": "Sincere@april.biz",
+                "id": 101,
+                "name": "Unnikuttan",
+                "username": "unni",
+                "email": "unnikuttanvv@gmail.com",
                 "address": {
-                    "street": "Kulas Light",
-                    "suite": "Apt. 556",
-                    "city": "Gwenborough",
-                    "zipcode": "92998-3874",
+                    "street": "Kirchoffstr",
+                    "suite": "Apt. 50",
+                    "city": "Karlsruhe",
+                    "zipcode": "76149",
                     "geo": {
                         "lat": "-37.3159",
                         "lng": "81.1496"
                     }
                 },
-                "phone": "1-770-736-8031 x56442",
-                "website": "hildegard.org",
+                "phone": "49-1743346080",
+                "website": "unni.org",
                 "company": {
-                    "name": "Romaguera-Crona",
-                    "catchPhrase": "Multi-layered client-server neural-net",
-                    "bs": "harness real-time e-markets"
+                    "name": "HMicro",
+                    "catchPhrase": "IoT based biosensors",
+                    "bs": "biosensors"
                 }
             }
 
@@ -137,9 +137,10 @@ class RestApi(object):
                 in_data_user_json = in_data_user.json()
                 email_ids = [data['email'] for data in in_data_user_json]
                 for email_id in email_ids:
-                    self.logger.info("PASSED for email id %s"%email_id)
-                else:
-                    self.logger.info("FAILED for email id %s"%email_id)
+                    if email_id.find('@') and email_id.find('.') > 0:
+                        self.logger.info("PASSED for email id %s"%email_id)
+                    else:
+                        self.logger.info("FAILED for email id %s"%email_id)
             else:
                 pass
 
@@ -148,3 +149,4 @@ if __name__ == '__main__':
     x.load_stability_commands()
     x.load_test()
     x.run_test()
+
